@@ -1,0 +1,21 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "이미 설정된 장치입니다."
+    },
+    "step": {
+      "input_refresh_token": {
+        "title": "OAuth Refresh Token 입력",
+        "data": {
+          "refresh_token": "Refresh Token"
+        }
+      },
+      "select_home": {
+        "title": "집 선택",
+        "data": {
+          "home_id": "집"
+        }
+      }
+    }
+  }
+}

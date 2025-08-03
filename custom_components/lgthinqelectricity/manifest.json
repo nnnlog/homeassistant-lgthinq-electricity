@@ -1,0 +1,15 @@
+{
+  "domain": "lgthinqelectricity",
+  "name": "LG ThinQ Electricity",
+  "codeowners": [
+    "@nnnlog"
+  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/nnnlog/homeassistant-lgthinq-electricity",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/nnnlog/homeassistant-lgthinq-electricity/issues",
+  "quality_scale": "bronze",
+  "requirements": [],
+  "version": "0.0.1"
+}

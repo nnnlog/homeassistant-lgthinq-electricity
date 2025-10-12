@@ -93,7 +93,7 @@ class LgThinqClient:
                 data[device_id] = {
                     "name": "전기 사용량",
                     "info": DeviceInfo(
-                        identifiers={(device["manufacture"]["serialNo"])},
+                        identifiers={(device["deviceId"])},
                         entry_type=DeviceEntryType.SERVICE,
                         manufacturer="LG Electronics",
                         model=device["modelName"],
@@ -107,7 +107,7 @@ class LgThinqClient:
                 data[device_id] = {
                     "name": "전기 사용량",
                     "info": DeviceInfo(
-                        identifiers={(device["manufacture"]["serialNo"])},
+                        identifiers={(device["deviceId"])},
                         entry_type=DeviceEntryType.SERVICE,
                         manufacturer="LG Electronics",
                         model=device["modelName"],

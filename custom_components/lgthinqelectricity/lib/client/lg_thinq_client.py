@@ -6,6 +6,7 @@ from typing import Any
 import aiohttp
 from homeassistant.helpers.device_registry import DeviceInfo, DeviceEntryType
 
+from ...const import DOMAIN
 from ..api.auth_api import AuthApi
 from ..api.device_api import DeviceApi
 from ..model.config import LgThinqConfig
@@ -93,11 +94,11 @@ class LgThinqClient:
                 data[device_id] = {
                     "name": "전기 사용량",
                     "info": DeviceInfo(
-                        identifiers={(device["deviceId"])},
+                        identifiers={(DOMAIN, device["deviceId"])},
                         entry_type=DeviceEntryType.SERVICE,
                         manufacturer="LG Electronics",
                         model=device["modelName"],
-                        translation_key=device["alias"],
+                        name=device["alias"],
                     ),
                     "value": float(energy_data) / 1000,  # Convert to kWh
                 }
@@ -107,11 +108,11 @@ class LgThinqClient:
                 data[device_id] = {
                     "name": "전기 사용량",
                     "info": DeviceInfo(
-                        identifiers={(device["deviceId"])},
+                        identifiers={(DOMAIN, device["deviceId"])},
                         entry_type=DeviceEntryType.SERVICE,
                         manufacturer="LG Electronics",
                         model=device["modelName"],
-                        translation_key=device["alias"],
+                        name=device["alias"],
                     ),
                     "value": float(energy_data) / 1000,  # Convert to kWh
                 }
